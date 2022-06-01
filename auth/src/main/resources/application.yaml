@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://server:post/dbname
+    username: root
+    password: root
+
+auth:
+  cookie:
+    auth: AUTH_TOKEN
+    refresh: REFRESH-TOKEN
+    secret: qwettsndgwejkklqwlmfrlk21
+    expiration-auth: 600000
+    expiration-refresh: 31536000
+    path: /
